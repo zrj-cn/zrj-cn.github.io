@@ -198,6 +198,9 @@ img {
   font-family: var(--serif);
   font-size: clamp(1rem, 1.35vw, 1.14rem);
   line-height: 1.45;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
 }
 
 .marker-highlight {
@@ -320,6 +323,7 @@ img {
 }
 
 #publications {
+  border-top: 0;
   padding-top: 1.5rem;
 }
 

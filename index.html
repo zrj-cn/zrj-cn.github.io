@@ -18,7 +18,7 @@
     <title>Rujie Zheng (Rowan) — Academic Homepage</title>
     <link rel="icon" href="/logo.png">
     <link rel="stylesheet" href="/styles.css">
-    <script src="/script.js" defer></script>
+    <script src="/script.js?v=20260802" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -114,10 +114,6 @@
       </section>
 
       <section class="content-section" id="education" aria-labelledby="education-title">
-        <div class="section-label">
-          <span>02</span>
-          <p>Education</p>
-        </div>
         <div class="section-content">
           <h2 id="education-title">Academic journey</h2>
           <div class="timeline">
@@ -191,31 +187,33 @@
       </section>
 
       <section class="content-section" id="publications" aria-labelledby="publications-title">
-        <div class="section-label">
-          <span>03</span>
-          <p>Publications</p>
-        </div>
         <div class="section-content">
           <h2 id="publications-title">Selected research</h2>
-          <article class="publication">
+          <article class="publication featured-publication">
             <a
-              class="publication-image-link"
+              class="publication-media-link"
               href="https://nju-3dv.github.io/projects/SpatialVID/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open the SpatialVID project page"
             >
-              <img
-                class="publication-image"
-                src="/projects/overview.png"
-                width="1250"
-                height="1419"
-                alt="SpatialVID dataset overview"
-                loading="lazy"
+              <video
+                class="publication-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-label="SpatialVID project preview"
               >
+                <source src="/projects/spatialvid/output.mp4" type="video/mp4">
+              </video>
             </a>
             <div class="publication-copy">
-              <p class="publication-year">2025 · Dataset</p>
+              <div class="publication-meta">
+                <span class="venue-badge">CVPR 2026</span>
+                <span class="publication-type">Dataset</span>
+              </div>
               <h3>SpatialVID: A Large-Scale Video Dataset with Spatial Annotations</h3>
               <p class="authors">
                 Jiahao Wang<sup>*</sup>, Yufeng Yuan<sup>*</sup>,
@@ -253,10 +251,6 @@
       </section>
 
       <section class="content-section honors-section" id="honors" aria-labelledby="honors-title">
-        <div class="section-label">
-          <span>04</span>
-          <p>Honors</p>
-        </div>
         <div class="section-content">
           <h2 id="honors-title">Awards &amp; honors</h2>
           <div class="honors-grid">

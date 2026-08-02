@@ -2,6 +2,14 @@ const modal = document.querySelector("#wechat-modal");
 const openButton = document.querySelector("#wechat-open");
 const closeControls = modal.querySelectorAll("[data-modal-close]");
 const closeButton = modal.querySelector(".modal-close");
+const siteHeader = document.querySelector(".site-header");
+
+function updateHeaderDivider() {
+  siteHeader?.classList.toggle("is-scrolled", window.scrollY > 8);
+}
+
+updateHeaderDivider();
+window.addEventListener("scroll", updateHeaderDivider, { passive: true });
 
 let previouslyFocusedElement = null;
 
@@ -37,3 +45,21 @@ document.addEventListener("keydown", (event) => {
     closeButton.focus();
   }
 });
+
+const projectVideo = document.querySelector(".publication-video");
+
+if (projectVideo) {
+  projectVideo.muted = true;
+
+  const startProjectVideo = () => {
+    projectVideo.play().catch(() => {
+      // Muted autoplay can still be restricted by a visitor's browser settings.
+    });
+  };
+
+  if (projectVideo.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA) {
+    startProjectVideo();
+  } else {
+    projectVideo.addEventListener("canplay", startProjectVideo, { once: true });
+  }
+}
